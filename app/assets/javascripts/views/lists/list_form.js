@@ -1,6 +1,10 @@
 TrelloClone.Views.ListForm = Backbone.View.extend({
   template: JST['lists/form'],
 
+  initialize: function (options) {
+    this.board = options.board;
+  },
+
   tagName: 'form',
 
   events: {
@@ -16,6 +20,7 @@ TrelloClone.Views.ListForm = Backbone.View.extend({
   submit: function (event) {
     event.preventDefault();
     var data = this.$el.serializeJSON();
+    data.board_id = this.board.id;
     this.model.save(data, {
       success: this.successfulSubmit.bind(this)
     });

@@ -5,6 +5,7 @@ TrelloClone.Views.BoardShow = Backbone.CompositeView.extend({
     this.addLists();
 
     var listForm = new TrelloClone.Views.ListForm({
+      board: this.model,
       model: new TrelloClone.Models.List(),
       collection: this.model.lists()
     });
