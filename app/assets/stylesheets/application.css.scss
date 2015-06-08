@@ -34,4 +34,6 @@
 .draggable-card {
   border: 1px solid black;
   cursor: default;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: position 0.1s;
 }
