@@ -2,3 +2,5 @@
 # it should include the board
 #  - its lists
 #    - the cards for each list
+
+json.extract!(@board, :id, :title)
