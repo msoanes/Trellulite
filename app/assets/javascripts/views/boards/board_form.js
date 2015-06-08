@@ -8,7 +8,6 @@ TrelloClone.Views.BoardForm = Backbone.View.extend({
   },
 
   render: function () {
-    console.log('rendering');
     var renderedContent = this.template();
     this.$el.html(renderedContent);
     return this;
