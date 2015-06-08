@@ -44,10 +44,13 @@ TrelloClone.Views.ListShow = Backbone.CompositeView.extend({
   },
 
   updateOrder: function () {
-    var order = this.$('.draggable-card').each(function(idx, el) {
+    var list_id = this.model.get('id');
+    var sortedIDs = this.$('.cards').sortable('toArray', { attribute: 'data-id'});
+    _(sortedIDs).each(function(el, idx) {
       var card = new TrelloClone.Models.Card({
-        id: $(el).data('id'),
+        id: el,
         ord: idx,
+        list_id: list_id
       });
       card.save();
     });
