@@ -19,4 +19,10 @@ class List < ActiveRecord::Base
   default_scope { order(:ord) }
 
   # TODO: class method for updating orders?
+  def self.update_order(board_id, new_order)
+    lists = List.where(board_id: board_id)
+    new_order.each_with_index do |id, ord|
+      lists.find(id).update(ord: ord)
+    end
+  end
 end

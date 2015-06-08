@@ -17,4 +17,12 @@ class Card < ActiveRecord::Base
   has_many :card_assignments, dependent: :destroy
 
   default_scope { order(:ord) }
+
+  def self.update_order(board_id, new_order)
+    lists = Card.where(board_id: board_id)
+    new_order.each_with_index do |id, ord|
+      lists.find(id).update(ord: ord)
+    end
+  end
+
 end

@@ -3,6 +3,10 @@ TrelloClone.Views.ListShow = Backbone.CompositeView.extend({
 
   className: 'col-md-3 my-panel',
 
+  events: {
+    'sortchange .cards': this.updateOrder
+  },
+
   initialize: function () {
     this.addCards();
 
@@ -35,5 +39,5 @@ TrelloClone.Views.ListShow = Backbone.CompositeView.extend({
       model: model
     });
     this.addSubview('.cards', cardView);
-  }
+  },
 });
