@@ -16,3 +16,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+.my-panel {
+  background-color: #f6f6f6;
+}
+
+.my-panel > .title {
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.my-panel > .title:hover {
+  color: #777;
+}
+
+.draggable-card {
+  border: 1px solid black;
+  cursor: default;
+}
