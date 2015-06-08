@@ -20,8 +20,9 @@ TrelloClone.Views.BoardsIndex = Backbone.CompositeView.extend({
   },
 
   addBoards: function () {
+    var view = this;
     this.collection.each(function (model) {
-      this.addBoard(model);
+      view.addBoard(model);
     });
   },
 
