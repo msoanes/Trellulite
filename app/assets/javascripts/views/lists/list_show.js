@@ -3,7 +3,7 @@ TrelloClone.Views.ListShow = Backbone.View.extend({
 
   render: function () {
     console.log('rendering');
-    var renderedContent = this.template({ board: this.model });
+    var renderedContent = this.template({ list: this.model });
     this.$el.html(renderedContent);
     return this;
   }
