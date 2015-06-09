@@ -1,5 +1,11 @@
 <div class="container sessions-container">
 
+  <div class="jumbotron">
+    <h1>Welcome to Trellulite</h1>
+    <p>
+      Trellulite is a lightweight, Trello-inspired organization system. Fast, simple, and pragmatic.
+    </p>
+  </div>
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
 
@@ -9,7 +15,8 @@
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <input class="form-control" name="user[email]" type="text" placeholder="Email address"><br>
         <input class="form-control" name="user[password]" type="password" placeholder="Password"><br>
-        <input type="submit" value="Sign In" class="btn btn-default wide-button"><br>
+        <input type="submit" value="Sign In" class="btn btn-default wide-button"><br> <br>
+        <%= link_to 'or sign up', new_user_url, class: 'btn btn-translucent wide-button'  %>
       </form>
     </div>
   </div>
