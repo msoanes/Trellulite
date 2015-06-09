@@ -1,7 +1,7 @@
 TrelloClone.Views.BoardsIndexItem = Backbone.View.extend({
   template: JST['boards/index_item'],
 
-  className: 'col-md-3 panel panel-default my-panel',
+  className: 'col-md-3 my-panel board-panel',
 
   events: {
     'click': 'visitBoard'
