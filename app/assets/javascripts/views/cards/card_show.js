@@ -3,6 +3,10 @@ TrelloClone.Views.CardShow = Backbone.View.extend({
 
   className: 'draggable-card',
 
+  events: {
+    'dblclick .glyphicon': 'removeCard'
+  },
+
   attributes: function () {
     return { 'data-id': this.model.id };
   },
@@ -12,5 +16,16 @@ TrelloClone.Views.CardShow = Backbone.View.extend({
     this.$el.html(renderedContent);
     return this;
   },
+
+  removeCard: function (event) {
+    console.log('propagation');
+    event.stopPropagation();
+    this.model.destroy({
+      success: function () {
+        console.log("destroyed")
+      }
+    });
+    this.remove();
+  }
 
 });

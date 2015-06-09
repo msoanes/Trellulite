@@ -101,3 +101,14 @@ input:focus {
   font-size: 24pt;
   font-weight: 400;
 }
+
+.cards .glyphicon.glyphicon-remove {
+  display: block;
+  position: absolute;
+}
+
+.cards .glyphicon.glyphicon-remove:hover {
+  color: white;
+  display: block;
+  position: absolute;
+}
