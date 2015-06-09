@@ -1,12 +1,16 @@
-<h1>Sign Up</h1>
+<div class="container sessions-container">
 
-<form action="/users" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label>Email<br>
-    <input name="user[email]" type="text"><br>
-  </label><br>
-  <label>Password<br>
-    <input name="user[password]" type="password"><br>
-  </label><br>
-  <input type="submit" value="Submit" class="btn btn-primary"><br>
-</form>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+
+      <h1>Sign Up</h1>
+
+      <form action="/users" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input class="form-control" name="user[email]" type="text" placeholder="Email address"><br>
+        <input class="form-control" name="user[password]" type="password" placeholder="Password"><br>
+        <input type="submit" value="Register" class="btn btn-default wide-button"><br>
+      </form>
+    </div>
+  </div>
+</div>
