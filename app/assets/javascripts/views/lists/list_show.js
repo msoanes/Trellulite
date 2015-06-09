@@ -3,6 +3,10 @@ TrelloClone.Views.ListShow = Backbone.CompositeView.extend({
 
   className: 'col-md-3 my-panel',
 
+  attributes: function () {
+    return { 'data-id': this.model.get('id') }
+  },
+
   events: {
     'sortdeactivate .cards': 'updateOrder'
   },
@@ -25,7 +29,7 @@ TrelloClone.Views.ListShow = Backbone.CompositeView.extend({
     var renderedContent = this.template({ list: this.model });
     this.$el.html(renderedContent);
     this.attachSubviews();
-    this.$('.cards').sortable();
+    this.$('.cards').sortable({connectWith: '.cards'});
     return this;
   },
 
@@ -43,7 +47,8 @@ TrelloClone.Views.ListShow = Backbone.CompositeView.extend({
     this.addSubview('.cards', cardView);
   },
 
-  updateOrder: function () {
+  updateOrder: function (event) {
+    event.stopPropagation();
     var list_id = this.model.get('id');
     var sortedIDs = this.$('.cards').sortable('toArray', { attribute: 'data-id'});
     _(sortedIDs).each(function(el, idx) {

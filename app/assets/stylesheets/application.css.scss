@@ -18,7 +18,11 @@
 @import "font-awesome";
 
 .my-panel {
-  background-color: #f6f6f6;
+  height: 600px;
+  background-color: #f5f5f5;
+  box-shadow: 5px 5px 5px;
+  border-radius: 0;
+  border: 1px solid #bbb;
 }
 
 .my-panel > .title {
@@ -27,13 +31,63 @@
   width: 100%;
 }
 
+.boards .my-panel .title h2 {
+  position: absolute;
+  top: 50%;
+  line-height: 1;
+}
+
 .my-panel > .title:hover {
   color: #777;
 }
 
-.draggable-card {
-  border: 1px solid black;
+.my-panel input {
+  border: 0;
+}
+
+.my-panel input:hover {
+  // background-color: #555;
+  cursor: text;
+}
+
+.my-panel input:focus {
+  background-color: #999;
+}
+
+.draggable-card, input {
+  width: 100%;
+  position: relative;
+  left: 0;
+  text-align: center;
+  height: 40px;
   cursor: default;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: position 0.1s;
+  background-color: #777;
+  color: #ddd;
+  border-bottom: 2px solid #666;
+  transition: background-color 0.5;
+}
+
+.draggable-card p {
+  position: relative;
+  top: 50%;
+  line-height: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.draggable-card:hover {
+  background-color: #666;
+}
+.draggable-card:active {
+  box-shadow: 2px 2px 2px black;
+  background-color: #999;
+  color: white;
+}
+
+.cards {
+  min-height: 40px;
+  background-color: #ccc;
+  box-shadow: inset 1px 1px 2px black;
 }

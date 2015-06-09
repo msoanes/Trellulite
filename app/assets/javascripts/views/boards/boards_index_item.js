@@ -4,7 +4,7 @@ TrelloClone.Views.BoardsIndexItem = Backbone.View.extend({
   className: 'col-md-3 panel panel-default my-panel',
 
   events: {
-    'click .title': 'visitBoard'
+    'click': 'visitBoard'
   },
 
   render: function () {
