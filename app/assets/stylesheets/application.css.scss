@@ -41,20 +41,20 @@
   color: #777;
 }
 
-.my-panel input {
+.new-card input {
   border: 0;
 }
 
-.my-panel input:hover {
-  // background-color: #555;
+.new-card input:hover {
+  background-color: #555;
   cursor: text;
 }
 
-.my-panel input:focus {
+.new-card input:focus {
   background-color: #999;
 }
 
-.draggable-card, input {
+.draggable-card, .new-card input {
   width: 100%;
   position: relative;
   left: 0;
@@ -90,4 +90,14 @@ input:focus {
   min-height: 40px;
   background-color: #ccc;
   box-shadow: inset 1px 1px 2px black;
+}
+
+.new-list input {
+  width: 100%;
+  text-align: center;
+  border: none;
+  background: none;
+  margin-top: 10px;
+  font-size: 24pt;
+  font-weight: 400;
 }

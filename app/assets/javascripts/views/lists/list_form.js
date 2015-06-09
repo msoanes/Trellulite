@@ -7,6 +7,8 @@ TrelloClone.Views.ListForm = Backbone.View.extend({
 
   tagName: 'form',
 
+  className: 'col-md-3 my-panel',
+
   events: {
     'submit': 'submit'
   },
