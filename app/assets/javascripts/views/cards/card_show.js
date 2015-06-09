@@ -4,7 +4,7 @@ TrelloClone.Views.CardShow = Backbone.View.extend({
   className: 'draggable-card',
 
   events: {
-    'dblclick .glyphicon': 'removeCard'
+    'click .glyphicon': 'removeCard'
   },
 
   attributes: function () {

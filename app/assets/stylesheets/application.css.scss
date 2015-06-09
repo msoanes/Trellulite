@@ -105,10 +105,23 @@ input:focus {
 .cards .glyphicon.glyphicon-remove {
   display: block;
   position: absolute;
+  line-height: 0;
+  top: 50%;
+  right: 5px;
 }
 
 .cards .glyphicon.glyphicon-remove:hover {
   color: white;
-  display: block;
+}
+
+.col-md-3 > .glyphicon {
+  color: #777;
   position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 14pt;
+}
+
+.col-md-3 > .glyphicon:hover {
+  color: #444;
 }
